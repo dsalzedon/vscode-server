@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  vscode:
+    container_name: "vscode-server"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    restart: always
+    volumes:
+      - ./src:/home/workspace
+    ports:
+      - 3000:3000
